@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entitiy-mappings>
+    <entity class="com.jovisco.quarkus.jdbc.Artist">
+        <table name="t_artists" />
+        <attributes>
+            <id name="id">
+                <generated-value strategy="AUTO" />
+            </id>
+        </attributes>
+    </entity>
+</entitiy-mappings>
