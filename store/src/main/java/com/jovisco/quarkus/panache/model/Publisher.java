@@ -1,4 +1,4 @@
-package com.jovisco.quarkus.panache;
+package com.jovisco.quarkus.panache.model;
 
 import java.time.Instant;
 
@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @Builder
 public class Publisher extends PanacheEntity {
-    
+
     private String name;
     @Builder.Default
     private Instant createdAt = Instant.now();
