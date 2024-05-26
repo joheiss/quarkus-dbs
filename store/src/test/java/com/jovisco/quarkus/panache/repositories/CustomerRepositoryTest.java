@@ -1,4 +1,4 @@
-package com.jovisco.quarkus.panache.repostories;
+package com.jovisco.quarkus.panache.repositories;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -22,15 +22,18 @@ public class CustomerRepositoryTest {
     void shouldCreateAndFindACustomer() {
 
         var customer = Customer.builder()
-            .firstName("firstName")
-            .lastName("lastName")
-            .email("email")
-            .build();
+                .firstName("firstName")
+                .lastName("lastName")
+                .email("email")
+                .build();
 
         customerRepository.persist(customer);
         assertNotNull(customer.getId());
 
         var found = customerRepository.findById(customer.getId());
+        assertEquals(found.getFirstName(), "firstName");
+
+        found = customerRepository.listAllByFirstName("firstName").getFirst();
         assertEquals(found.getFirstName(), "firstName");
     }
 }
