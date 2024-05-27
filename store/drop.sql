@@ -1,21 +1,35 @@
 
-    drop table if exists t_artists cascade ;
+    alter table if exists t_items 
+       drop constraint if exists FKr3152tukbog585dik5qwonldg;
 
-    drop table if exists t_books cascade ;
+    alter table if exists t_items 
+       drop constraint if exists FKi6lqpcqfnc4dtsp9w473p5kkj;
 
-    drop table if exists t_cds cascade ;
+    alter table if exists t_purchase_order_lines 
+       drop constraint if exists FKf51l5n972qc282ubbv97c1kfa;
 
-    drop table if exists t_customers cascade ;
+    alter table if exists t_purchase_order_lines 
+       drop constraint if exists FKbjsagtstxdmdm55cxqvbxkaji;
 
-    drop table if exists t_items cascade ;
+    alter table if exists t_purchase_orders 
+       drop constraint if exists FK93wd2w995ng3vyj51y4fur1hg;
 
-    drop table if exists t_publishers cascade ;
+    alter table if exists t_tracks 
+       drop constraint if exists FK23u6r10m0dkp0m8t5hr40ilux;
 
-    drop table if exists t_purchase_order_lines cascade ;
+    drop table if exists t_artists cascade;
 
-    drop table if exists t_purchase_orders cascade ;
+    drop table if exists t_customers cascade;
 
-    drop table if exists t_tracks cascade ;
+    drop table if exists t_items cascade;
+
+    drop table if exists t_publishers cascade;
+
+    drop table if exists t_purchase_order_lines cascade;
+
+    drop table if exists t_purchase_orders cascade;
+
+    drop table if exists t_tracks cascade;
 
     drop sequence if exists t_artists_SEQ;
 

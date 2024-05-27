@@ -1,0 +1,59 @@
+@baseUrl = http://localhost:8080/api/v1
+
+GET {{baseUrl}}/artists
+
+###
+
+GET {{baseUrl}}/artists/100
+
+###
+
+POST {{baseUrl}}/artists
+Content-Type: application/json
+
+{
+    "name": "Jo Heiss",
+    "bio": "He is the dumbest guy you will ever meet. Trust him!"
+}
+
+###
+DELETE {{baseUrl}}/artists/100
+
+###
+
+GET {{baseUrl}}/customers
+
+###
+
+GET {{baseUrl}}/customers/1
+
+###
+
+GET {{baseUrl}}/publishers
+
+###
+
+GET {{baseUrl}}/publishers/1
+
+###
+
+POST {{baseUrl}}/publishers
+Content-Type: application/json
+
+{
+    "name": "Jo Heiss Publishing Ltd"
+}
+
+###
+DELETE {{baseUrl}}/publishers/100
+
+###
+
+
+GET {{baseUrl}}/orders
+
+###
+
+GET {{baseUrl}}/orders/2
+
+###

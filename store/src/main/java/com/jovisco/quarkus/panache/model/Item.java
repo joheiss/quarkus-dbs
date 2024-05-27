@@ -22,7 +22,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "t_items")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -45,5 +45,5 @@ public class Item extends PanacheEntity {
 
     @Column(name = "created_at", nullable = false)
     @Builder.Default
-    private Instant createdAt = Instant.now();    
+    private Instant createdAt = Instant.now();
 }
